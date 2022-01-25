@@ -1,7 +1,7 @@
 version: 2
 
 models:
-  - name: stg_customers
+  - name: stg_jaffle_shop__customers
     description: Staging table for jaffle shop customers
     columns:
       - name: id
@@ -12,7 +12,7 @@ models:
         description: First name of customer
       - name: last_name
         description: Last name of customer
-  - name: stg_orders
+  - name: stg_jaffle_shop__orders
     description: Staging table for jaffle shop orders
     columns:
       - name: id
