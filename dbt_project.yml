@@ -37,3 +37,4 @@ models:
     # Applies to all files in staging
     staging:
       +materialized: view
+      +schema: staging
