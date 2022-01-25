@@ -1,0 +1,33 @@
+version: 2
+
+models:
+  - name: stg_customers
+    description: Staging table for jaffle shop customers
+    columns:
+      - name: id
+        tests:
+          - unique
+          - not_null
+      - name: first_name
+        description: First name of customer
+      - name: last_name
+        description: Last name of customer
+  - name: stg_orders
+    description: Staging table for jaffle shop orders
+    columns:
+      - name: id
+        tests:
+          - unique
+          - not_null
+      - name: order_date
+      - name: status
+        tests:
+          - accepted_values:
+              values: ['completed', 'placed', 'return_pending', 'returned', 'shipped']
+              severity: warn
+      - name: customer_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('customers')
+              field: id

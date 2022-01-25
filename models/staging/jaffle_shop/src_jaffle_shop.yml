@@ -23,6 +23,10 @@ sources:
                 - not_null
             - name: order_date
             - name: status
+              tests:
+                - accepted_values:
+                    values: ['completed', 'placed', 'return_pending', 'returned', 'shipped']
+                    severity: warn
             - name: user_id
               tests:
                 - not_null
