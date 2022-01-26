@@ -1,1 +1,1 @@
-select * from {{ ref('stg_jaffle_shop_customers') }}
+select * from {{ ref('stg_jaffle_shop__customers') }}
