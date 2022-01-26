@@ -3,7 +3,7 @@ with
 renamed as (
 
     select
-        id,
+        id as order_id,
         order_date::date as order_date,
         status,
         user_id as customer_id
